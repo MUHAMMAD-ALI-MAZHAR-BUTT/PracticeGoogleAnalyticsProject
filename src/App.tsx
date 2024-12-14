@@ -71,7 +71,7 @@ function SignIn() {
           Password:
           <input type="password" name="password" required />
         </label>
-        <button type="submit">Sign In</button>
+        <button type="submit" id='signInButtonClickID'>Sign In</button>
       </form>
     </main>
   );
