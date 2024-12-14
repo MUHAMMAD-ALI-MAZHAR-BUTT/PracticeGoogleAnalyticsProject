@@ -62,7 +62,7 @@ function SignIn() {
   return (
     <main>
       <h1>Sign In</h1>
-      <form className="signin-form">
+      <>
         <label>
           Username:
           <input type="text" name="username" required />
@@ -72,7 +72,7 @@ function SignIn() {
           <input type="password" name="password" required />
         </label>
         <button type="submit" id='signInButtonClickID'>Sign In</button>
-      </form>
+      </>
     </main>
   );
 }
