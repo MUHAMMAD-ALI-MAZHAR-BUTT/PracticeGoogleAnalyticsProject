@@ -107,12 +107,13 @@ export default function App() {
     <Router>
       <div className="app">
         <Header />
-        <Routes>
+        <button type="submit" id='signInButtonClickID'>Sign In</button>
+        {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element={<SignIn />} />
-        </Routes>
+        </Routes> */}
         <Footer />
       </div>
     </Router>
