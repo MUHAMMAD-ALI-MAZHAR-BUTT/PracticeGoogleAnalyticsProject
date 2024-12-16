@@ -7,6 +7,7 @@ import {
   Link
 } from 'react-router-dom';
 import './index.css';
+import { useEffect } from 'react';
 
 function Header() {
   return (
@@ -59,6 +60,19 @@ function Contact() {
 }
 
 function SignIn() {
+
+
+  useEffect(() => {
+    let environment = 'development'; // Default to local
+
+    // Push the environment to the dataLayer
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'environment': environment,
+    });
+  }, []);
+  
+  
   return (
     <main>
       <h1>Sign In</h1>
@@ -78,6 +92,17 @@ function SignIn() {
 }
 
 export default function App() {
+
+  useEffect(() => {
+    let environment = 'development'; // Default to local
+
+    // Push the environment to the dataLayer
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'environment': environment,
+    });
+  }, []);
+  
   return (
     <Router>
       <div className="app">
@@ -96,4 +121,5 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(<App />);
+
 
