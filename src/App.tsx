@@ -40,8 +40,7 @@ console.log("button clicked")
     // Push the environment to the dataLayer
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      'environment': environment,
-      'event': 'signInButtonClick'
+      'environment': environment
     });
   };
   
