@@ -35,22 +35,22 @@ function Footer() {
 console.log("iiiiii")
 export default function App() {
 
-  useEffect(() => {
+ const sendAnalytics=() => {
     let environment = 'development'; // Default to local
-
+console.log("button clicked")
     // Push the environment to the dataLayer
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'environment': environment,
       'event': 'signInButtonClick'
     });
-  }, []);
+  };
   
   return (
     <Router>
       <div className="app">
         <Header />
-        <button type="submit" id='signInButtonClickID'>Sign In</button>
+        <button type="submit" id='signInButtonClickID' onClick={sendAnalytics}>Sign In</button>
         <Footer />
       </div>
     </Router>
