@@ -32,6 +32,7 @@ function Footer() {
 }
 
 
+console.log("iiiiii")
 export default function App() {
 
   useEffect(() => {
@@ -41,6 +42,7 @@ export default function App() {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'environment': environment,
+      'event': 'signInButtonClick'
     });
   }, []);
   
@@ -49,12 +51,6 @@ export default function App() {
       <div className="app">
         <Header />
         <button type="submit" id='signInButtonClickID'>Sign In</button>
-        {/* <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/signin" element={<SignIn />} />
-        </Routes> */}
         <Footer />
       </div>
     </Router>
@@ -63,5 +59,4 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(<App />);
-
 
