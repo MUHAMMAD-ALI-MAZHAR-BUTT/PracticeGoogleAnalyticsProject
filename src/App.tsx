@@ -5,8 +5,7 @@ import {
 
   Link
 } from 'react-router-dom';
-import './index.css';
-import { useEffect } from 'react';
+import './index.css'; 
 
 function Header() {
   return (
