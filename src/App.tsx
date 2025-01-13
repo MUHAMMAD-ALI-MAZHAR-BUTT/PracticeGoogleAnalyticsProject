@@ -35,10 +35,13 @@ function Footer() {
 
 export default function App() {
   const sendAnalytics = () => {
-    let environment = "development";
-    console.log("button clicked");
+    let environment = "development"; // Get environment from your variable
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
+      event: "button_click",
+      eventCategory: "User Interaction",
+      eventAction: "Sign In Button Clicked",
+      eventLabel: "Sign In Button",
       environment: environment,
     });
   };
